@@ -1,0 +1,26 @@
+# Django Framework
+Django>=4.2,<5.0
+
+# REST Framework
+djangorestframework>=3.14.0
+djangorestframework-simplejwt>=5.3.0
+
+# CORS
+django-cors-headers>=4.3.0
+
+# Admin Theme (修正了包名)
+django-jazzmin>=2.6.0
+
+# Database
+# Windows 推荐用 PyMySQL，Linux 生产环境推荐 mysqlclient
+PyMySQL>=1.1.0
+mysqlclient>=2.2.0
+
+# Pillow (图片处理)
+Pillow>=10.0.0
+
+# python-dotenv (环境变量管理)
+python-dotenv>=1.0.0
+
+# MinIO (对象存储)
+minio>=7.2.0

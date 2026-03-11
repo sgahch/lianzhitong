@@ -1,0 +1,903 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\lianzhitong\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /
+"GET / HTTP/1.1" 401 43
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3515
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 172
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 172
+"OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+"OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+"POST /api/token/refresh/ HTTP/1.1" 200 244
+"POST /api/token/refresh/ HTTP/1.1" 200 244
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+"OPTIONS /api/token/ HTTP/1.1" 200 0
+"POST /api/token/ HTTP/1.1" 200 489
+"OPTIONS /api/users/?username=Ynchen HTTP/1.1" 200 0
+"GET /api/users/?username=Ynchen HTTP/1.1" 200 220
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"POST /api/token/ HTTP/1.1" 200 489
+"GET /api/users/?username=Ynchen HTTP/1.1" 200 220
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+Watching for file changes with StatReloader
+Unauthorized: /
+"GET / HTTP/1.1" 401 43
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3515
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /
+"GET / HTTP/1.1" 401 43
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3515
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+"OPTIONS /api/token/ HTTP/1.1" 200 0
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 63
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 63
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 63
+"POST /api/token/ HTTP/1.1" 200 489
+"OPTIONS /api/users/?username=admin HTTP/1.1" 200 0
+"GET /api/users/?username=admin HTTP/1.1" 200 220
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/token/ HTTP/1.1" 200 0
+"POST /api/token/ HTTP/1.1" 200 489
+"OPTIONS /api/users/?username=Ynchen HTTP/1.1" 200 0
+"GET /api/users/?username=Ynchen HTTP/1.1" 200 220
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+"OPTIONS /api/token/ HTTP/1.1" 200 0
+"POST /api/token/ HTTP/1.1" 200 489
+"OPTIONS /api/users/?username=admin HTTP/1.1" 200 0
+"GET /api/users/?username=admin HTTP/1.1" 200 220
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/trials/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/trials/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"OPTIONS /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/trials/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"OPTIONS /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 0
+"OPTIONS /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/trials/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"OPTIONS /api/clues/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"OPTIONS /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 0
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+Unauthorized: /api/auth/me/
+"GET /api/auth/me/ HTTP/1.1" 401 21
+"OPTIONS /api/token/ HTTP/1.1" 200 0
+"POST /api/token/ HTTP/1.1" 200 489
+"OPTIONS /api/users/?username=Ynchen HTTP/1.1" 200 0
+"GET /api/users/?username=Ynchen HTTP/1.1" 200 220
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"POST /api/token/ HTTP/1.1" 200 489
+"GET /api/users/?username=admin HTTP/1.1" 200 220
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"OPTIONS /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 328
+"OPTIONS /api/assist-party-tasks/1/ HTTP/1.1" 200 0
+"DELETE /api/assist-party-tasks/1/ HTTP/1.1" 204 0
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 481
+"OPTIONS /api/conclusions/4/ HTTP/1.1" 200 0
+"DELETE /api/conclusions/4/ HTTP/1.1" 204 0
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1559
+"OPTIONS /api/reports/6/ HTTP/1.1" 200 0
+"DELETE /api/reports/6/ HTTP/1.1" 204 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1046
+"OPTIONS /api/reports/5/ HTTP/1.1" 200 0
+"PATCH /api/reports/5/ HTTP/1.1" 200 505
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Unauthorized: /
+"GET / HTTP/1.1" 401 43
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"GET /api/auth/me/ HTTP/1.1" 200 184
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"OPTIONS /api/trials/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 0
+"OPTIONS /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"OPTIONS /api/clues/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"OPTIONS /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 0
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"OPTIONS /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 2699
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"OPTIONS /api/reports/1/ HTTP/1.1" 200 0
+Bad Request: /api/reports/1/
+"PATCH /api/reports/1/ HTTP/1.1" 400 51
+"OPTIONS /api/reports/1/ HTTP/1.1" 200 0
+Bad Request: /api/reports/1/
+"PATCH /api/reports/1/ HTTP/1.1" 400 51
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\reports\models.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2699
+"OPTIONS /api/cases/1/ HTTP/1.1" 200 0
+"DELETE /api/cases/1/ HTTP/1.1" 204 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1825
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1825
+"OPTIONS /api/cases/?page_size=100 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 1825
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"OPTIONS /api/evidences/?case=6 HTTP/1.1" 200 0
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"GET /api/evidences/?case=6 HTTP/1.1" 200 222
+"OPTIONS /api/evidences/5/ HTTP/1.1" 200 0
+"DELETE /api/evidences/5/ HTTP/1.1" 204 0
+"GET /api/evidences/?case=6 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 1825
+"OPTIONS /api/trials/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 443
+"OPTIONS /api/trials/4/ HTTP/1.1" 200 0
+"PATCH /api/trials/4/ HTTP/1.1" 200 394
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 446
+"PATCH /api/trials/4/ HTTP/1.1" 200 396
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 448
+"DELETE /api/trials/4/ HTTP/1.1" 204 0
+"GET /api/trials/?page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 1825
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/assist-party-tasks/?page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 0
+"OPTIONS /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"OPTIONS /api/clues/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/clues/?page=1&page_size=10 HTTP/1.1" 200 867
+"OPTIONS /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 0
+"GET /api/users/?is_active=true&page_size=100 HTTP/1.1" 200 220
+"OPTIONS /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/regulations/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1825
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1047
+"OPTIONS /api/reports/1/ HTTP/1.1" 200 0
+"PATCH /api/reports/1/ HTTP/1.1" 200 490
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1048
+"OPTIONS /api/reports/ HTTP/1.1" 200 0
+"POST /api/reports/ HTTP/1.1" 201 512
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1561
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1825
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1561
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1561
+"OPTIONS /api/reports/7/ HTTP/1.1" 200 0
+"PATCH /api/reports/7/ HTTP/1.1" 200 513
+"OPTIONS /api/cases/ HTTP/1.1" 200 0
+Bad Request: /api/cases/
+"POST /api/cases/ HTTP/1.1" 400 54
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+"OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+"PATCH /api/reports/7/ HTTP/1.1" 200 513
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+"OPTIONS /api/reports/?status=recycled&page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?status=recycled&page=1&page_size=10 HTTP/1.1" 200 1056
+"OPTIONS /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1825
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 1562
+Bad Request: /api/reports/
+"POST /api/reports/ HTTP/1.1" 400 53
+"OPTIONS /api/reports/ HTTP/1.1" 200 0
+Bad Request: /api/reports/
+"POST /api/reports/ HTTP/1.1" 400 53
+"OPTIONS /api/reports/ HTTP/1.1" 200 0
+Bad Request: /api/reports/
+"POST /api/reports/ HTTP/1.1" 400 53
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\reports\models.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/reports/ HTTP/1.1" 200 0
+"POST /api/reports/ HTTP/1.1" 201 515
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2078
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2078
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1825
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2078
+"OPTIONS /api/reports/8/ HTTP/1.1" 200 0
+"PATCH /api/reports/8/ HTTP/1.1" 200 516
+Bad Request: /api/cases/
+"POST /api/cases/ HTTP/1.1" 400 54
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2079
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2079
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2079
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2079
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2079
+"OPTIONS /api/reports/8/ HTTP/1.1" 200 0
+"PATCH /api/reports/8/ HTTP/1.1" 200 516
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2079
+"OPTIONS /api/reports/ HTTP/1.1" 200 0
+"POST /api/reports/ HTTP/1.1" 201 522
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2602
+"OPTIONS /api/reports/9/ HTTP/1.1" 200 0
+"PATCH /api/reports/9/ HTTP/1.1" 200 523
+"OPTIONS /api/cases/ HTTP/1.1" 200 0
+"POST /api/cases/ HTTP/1.1" 201 898
+"OPTIONS /api/reports/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"OPTIONS /api/cases/?page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 2851
+"OPTIONS /api/cases/6/ HTTP/1.1" 200 0
+"DELETE /api/cases/6/ HTTP/1.1" 204 0
+"GET /api/cases/?page=1&page_size=10 HTTP/1.1" 200 1973
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"PATCH /api/reports/8/ HTTP/1.1" 200 516
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/reports/?report_type=letter&status=pending&page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?report_type=letter&status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"OPTIONS /api/reports/?report_type=letter&page=1&page_size=10 HTTP/1.1" 200 0
+"GET /api/reports/?report_type=letter&page=1&page_size=10 HTTP/1.1" 200 542
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/reports/?page=1&page_size=10 HTTP/1.1" 200 2603
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/reports/?status=pending&page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/supervision/?page=1&page_size=10 HTTP/1.1" 200 449
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 52
+"GET /api/cases/?page_size=100 HTTP/1.1" 200 1973
+"OPTIONS /api/conclusions/ HTTP/1.1" 200 0
+"POST /api/conclusions/ HTTP/1.1" 201 172
+"GET /api/conclusions/?page=1&page_size=10 HTTP/1.1" 200 479
+"OPTIONS /api/token/ HTTP/1.1" 200 0
+"POST /api/token/ HTTP/1.1" 200 489
+"OPTIONS /api/users/?username=admin HTTP/1.1" 200 0
+"GET /api/users/?username=admin HTTP/1.1" 200 220
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+"GET /api/auth/me/ HTTP/1.1" 200 202
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\lianzhitong\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\cases\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\cases\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Ynchen\Desktop\Á®ÖÇÍ¨\backend\reports\models.py changed, reloading.

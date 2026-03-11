@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级马里奥 - HTML5游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
+            border: 5px solid #333;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .ui-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .level-info {
+            margin-bottom: 10px;
+        }
+
+        .score-info {
+            margin-bottom: 10px;
+        }
+
+        .health-bar {
+            width: 150px;
+            height: 20px;
+            background: #333;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .health-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff9900);
+            transition: width 0.2s;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 12px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            z-index: 200;
+            display: none;
+            min-width: 300px;
+        }
+
+        .modal.show {
+            display: block;
+        }
+
+        .modal h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+
+        .modal p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .modal button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 16px;
+            background: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .modal button:hover {
+            background: #FFC700;
+            transform: scale(1.05);
+        }
+
+        .particles {
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="ui">
+            <div class="level-info">🎮 关卡: <span id="levelDisplay">1</span></div>
+            <div class="score-info">⭐ 分数: <span id="scoreDisplay">0</span></div>
+            <div class="health-bar">
+                <div class="health-fill" id="healthFill"></div>
+            </div>
+            <div id="coinDisplay">🪙 金币: 0</div>
+        </div>
+
+        <div class="ui-right">
+            <div id="timeDisplay">⏱️ 时间: 300</div>
+        </div>
+
+        <div class="controls">
+            <div>⬅️ ➡️: 移动 | 空格: 跳跃 | P: 暂停 | R: 重启</div>
+        </div>
+
+        <div id="gameModal" class="modal">
+            <h1 id="modalTitle">游戏结束</h1>
+            <p id="modalText">最终分数: 0</p>
+            <button onclick="location.reload()">重新开始</button>
+        </div>
+    </div>
+
+    <script>
+        // ==================== 游戏配置 ====================
+        const LEVELS = [
+            {
+                name: 1,
+                platforms: [
+                    {x: 0, y: 550, width: 800, height: 50}, // 地面
+                    {x: 150, y: 480, width: 150, height: 20},
+                    {x: 400, y: 420, width: 150, height: 20},
+                    {x: 600, y: 480, width: 150, height: 20},
+                    {x: 250, y: 350, width: 100, height: 20},
+                    {x: 500, y: 300, width: 120, height: 20}
+                ],
+                enemies: [
+                    {x: 300, y: 430, width: 30, height: 30, speed: 2, range: [200, 400]},
+                    {x: 550, y: 370, width: 30, height: 30, speed: 2, range: [450, 650]}
+                ],
+                coins: [
+                    {x: 200, y: 420}, {x: 230, y: 420}, {x: 260, y: 420},
+                    {x: 450, y: 360}, {x: 480, y: 360}, {x: 510, y: 360},
+                    {x: 650, y: 420}
+                ],
+                goal: {x: 700, y: 480, width: 80, height: 70}
+            },
+            {
+                name: 2,
+                platforms: [
+                    {x: 0, y: 550, width: 800, height: 50},
+                    {x: 50, y: 480, width: 120, height: 20},
+                    {x: 200, y: 420, width: 120, height: 20},
+                    {x: 350, y: 360, width: 120, height: 20},
+                    {x: 500, y: 300, width: 120, height: 20},
+                    {x: 650, y: 400, width: 120, height: 20},
+                    {x: 200, y: 280, width: 100, height: 20}
+                ],
+                enemies: [
+                    {x: 300, y: 370, width: 30, height: 30, speed: 2.5, range: [150, 450]},
+                    {x: 550, y: 250, width: 30, height: 30, speed: 2.5, range: [400, 700]},
+                    {x: 100, y: 430, width: 30, height: 30, speed: 2, range: [0, 300]}
+                ],
+                coins: [
+                    {x: 100, y: 400}, {x: 250, y: 340}, {x: 400, y: 280},
+                    {x: 550, y: 240}, {x: 700, y: 340}, {x: 300, y: 240}
+                ],
+                goal: {x: 680, y: 480, width: 80, height: 70}
+            },
+            {
+                name: 3,
+                platforms: [
+                    {x: 0, y: 550, width: 800, height: 50},
+                    {x: 0, y: 480, width: 100, height: 20},
+                    {x: 150, y: 420, width: 80, height: 20},
+                    {x: 280, y: 360, width: 80, height: 20},
+                    {x: 410, y: 300, width: 80, height: 20},
+                    {x: 540, y: 360, width: 80, height: 20},
+                    {x: 670, y: 420, width: 80, height: 20},
+                    {x: 700, y: 480, width: 100, height: 20},
+                    {x: 300, y: 200, width: 200, height: 20}
+                ],
+                enemies: [
+                    {x: 200, y: 370, width: 30, height: 30, speed: 3, range: [100, 400]},
+                    {x: 400, y: 250, width: 30, height: 30, speed: 3, range: [250, 550]},
+                    {x: 600, y: 370, width: 30, height: 30, speed: 3, range: [450, 700]},
+                    {x: 100, y: 430, width: 30, height: 30, speed: 2, range: [0, 300]}
+                ],
+                coins: [
+                    {x: 50, y: 420}, {x: 200, y: 340}, {x: 330, y: 280},
+                    {x: 460, y: 220}, {x: 590, y: 280}, {x: 720, y: 340},
+                    {x: 400, y: 140}, {x: 350, y: 140}, {x: 450, y: 140}
+                ],
+                goal: {x: 680, y: 480, width: 80, height: 70}
+            }
+        ];
+
+        // ==================== 音效系统 ====================
+        class AudioManager {
+            constructor() {
+                this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                this.masterVolume = 0.5;
+            }
+
+            playJump() {
+                this.playTone(400, 0.1, 0.1);
+            }
+
+            playCoin() {
+                this.playTone(800, 0.05, 0.1);
+                this.playTone(1000, 0.05, 0.05);
+            }
+
+            playHit() {
+                this.playTone(200, 0.05, 0.15);
+            }
+
+            playGameOver() {
+                this.playTone(300, 0.1, 0.2);
+                this.playTone(250, 0.1, 0.2);
+                this.playTone(200, 0.1, 0.3);
+            }
+
+            playLevelComplete() {
+                const notes = [523, 659, 784, 1047];
+                notes.forEach((freq, i) => {
+                    setTimeout(() => this.playTone(freq, 0.1, 0.1), i * 150);
+                });
+            }
+
+            playTone(frequency, volume, duration) {
+                const now = this.audioContext.currentTime;
+                const osc = this.audioContext.createOscillator();
+                const gain = this.audioContext.createGain();
+
+                osc.connect(gain);
+                gain.connect(this.audioContext.destination);
+
+                osc.frequency.value = frequency;
+                gain.gain.setValueAtTime(volume * this.masterVolume, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + duration);
+
+                osc.start(now);
+                osc.stop(now + duration);
+            }
+        }
+
+        // ==================== 粒子系统 ====================
+        class Particle {
+            constructor(x, y, vx, vy, color, life) {
+                this.x = x;
+                this.y = y;
+                this.vx = vx;
+                this.vy = vy;
+                this.color = color;
+                this.life = life;
+                this.maxLife = life;
+                this.gravity = 0.3;
+            }
+
+            update() {
+                this.vy += this.gravity;
+                this.x += this.vx;
+                this.y += this.vy;
+                this.life--;
+            }
+
+            draw(ctx) {
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.life / this.maxLife;
+                ctx.fillRect(this.x, this.y, 5, 5);
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        // ==================== 马里奥角色 ====================
+        class Mario {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.width = 30;
+                this.height = 40;
+                this.velocityY = 0;
+                this.velocityX = 0;
+                this.jumping = false;
+                this.speed = 5;
+                this.jumpPower = 15;
+                this.gravity = 0.6;
+                this.maxHealth = 100;
+                this.health = 100;
+                this.isInvincible = false;
+                this.invincibleTime = 0;
+            }
+
+            draw(ctx) {
+                // 闪烁效果
+                if (this.isInvincible && Math.floor(this.invincibleTime / 5) % 2 === 0) {
+                    return;
+                }
+
+                // 马里奥身体
+                ctx.fillStyle = '#FF0000';
+                ctx.fillRect(this.x + 5, this.y + 15, 20, 20);
+
+                // 头部
+                ctx.fillStyle = '#FFCC99';
+                ctx.beginPath();
+                ctx.arc(this.x + 15, this.y + 10, 10, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 眼睛
+                ctx.fillStyle = '#000';
+                ctx.beginPath();
+                ctx.arc(this.x + 12, this.y + 8, 3, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(this.x + 18, this.y + 8, 3, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 帽子
+                ctx.fillStyle = '#FF0000';
+                ctx.beginPath();
+                ctx.moveTo(this.x + 5, this.y + 5);
+                ctx.lineTo(this.x + 25, this.y + 5);
+                ctx.lineTo(this.x + 22, this.y);
+                ctx.lineTo(this.x + 8, this.y);
+                ctx.fill();
+
+                // 胡子
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(this.x + 10, this.y + 13);
+                ctx.lineTo(this.x + 5, this.y + 13);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(this.x + 20, this.y + 13);
+                ctx.lineTo(this.x + 25, this.y + 13);
+                ctx.stroke();
+
+                // 双腿
+                ctx.fillStyle = '#4444AA';
+                ctx.fillRect(this.x + 8, this.y + 35, 5, 8);
+                ctx.fillRect(this.x + 17, this.y + 35, 5, 8);
+            }
+
+            update(keys, platforms) {
+                // 水平移动
+                if (keys['ArrowLeft'] || keys['a']) {
+                    this.velocityX = -this.speed;
+                } else if (keys['ArrowRight'] || keys['d']) {
+                    this.velocityX = this.speed;
+                } else {
+                    this.velocityX *= 0.8;
+                }
+
+                this.x += this.velocityX;
+
+                // 边界检测
+                if (this.x < 0) this.x = 0;
+                if (this.x + this.width > 800) this.x = 800 - this.width;
+
+                // 跳跃
+                if ((keys[' '] || keys['w']) && !this.jumping) {
+                    this.velocityY = -this.jumpPower;
+                    this.jumping = true;
+                    audioManager.playJump();
+                }
+
+                // 重力
+                this.velocityY += this.gravity;
+                this.y += this.velocityY;
+
+                // 平台碰撞
+                this.jumping = true;
+                let onGround = false;
+
+                for (let platform of platforms) {
+                    if (this.velocityY >= 0 &&
+                        this.y + this.height <= platform.y + 5 &&
+                        this.y + this.height >= platform.y - 5 &&
+                        this.x + this.width > platform.x &&
+                        this.x < platform.x + platform.width) {
+                        
+                        this.y = platform.y - this.height;
+                        this.velocityY = 0;
+                        this.jumping = false;
+                        onGround = true;
+                    }
+                }
+
+                // 掉落检测
+                if (this.y > 600) {
+                    this.takeDamage(30);
+                    this.x = 50;
+                    this.y = 480;
+                    this.velocityY = 0;
+                }
+
+                // 无敌时间
+                if (this.isInvincible) {
+                    this.invincibleTime--;
+                    if (this.invincibleTime <= 0) {
+                        this.isInvincible = false;
+                    }
+                }
+
+                keys[' '] = false;
+                keys['w'] = false;
+            }
+
+            takeDamage(amount) {
+                if (!this.isInvincible) {
+                    this.health = Math.max(0, this.health - amount);
+                    this.isInvincible = true;
+                    this.invincibleTime = 60;
+                    audioManager.playHit();
+                }
+            }
+
+            heal(amount) {
+                this.health = Math.min(this.maxHealth, this.health + amount);
+            }
+
+            getRect() {
+                return {
+                    x: this.x,
+                    y: this.y,
+                    width: this.width,
+                    height: this.height
+                };
+            }
+        }
+
+        // ==================== 敌人类 ====================
+        class Enemy {
+            constructor(x, y, width, height, speed, range) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.speed = speed;
+                this.range = range;
+                this.direction = 1;
+            }
+
+            update() {
+                this.x += this.speed * this.direction;
+
+                if (this.x < this.range[0] || this.x > this.range[1]) {
+                    this.direction *= -1;
+                }
+            }
+
+            draw(ctx) {
+                // 敌人身体
+                ctx.fillStyle = '#00AA00';
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+
+                // 眼睛
+                ctx.fillStyle = '#FFF';
+                ctx.fillRect(this.x + 5, this.y + 5, 6, 6);
+                ctx.fillRect(this.x + 19, this.y + 5, 6, 6);
+
+                ctx.fillStyle = '#000';
+                ctx.fillRect(this.x + 6, this.y + 6, 4, 4);
+                ctx.fillRect(this.x + 20, this.y + 6, 4, 4);
+
+                // 刺
+                ctx.fillStyle = '#00AA00';
+                ctx.beginPath();
+                ctx.moveTo(this.x + 5, this.y);
+                ctx.lineTo(this.x + 10, this.y - 5);
+                ctx.lineTo(this.x + 8, this.y);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(this.x + 15, this.y);
+                ctx.lineTo(this.x + 20, this.y - 5);
+                ctx.lineTo(this.x + 18, this.y);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(this.x + 25, this.y);
+                ctx.lineTo(this.x + 30, this.y - 5);
+                ctx.lineTo(this.x + 28, this.y);
+                ctx.fill();
+            }
+
+            getRect() {
+                return {
+                    x: this.x,
+                    y: this.y,
+                    width: this.width,
+                    height: this.height
+                };
+            }
+        }
+
+        // ==================== 主游戏类 ====================
+        class Game {
+            constructor() {
+                this.canvas = document.getElementById('gameCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.currentLevel = 0;
+                this.score = 0;
+                this.coins = 0;
+                this.timeLeft = 300;
+                this.gameOver = false;
+                this.won = false;
+                this.paused = false;
+                this.particles = [];
+                this.keys = {};
+                this.setupLevel();
+                this.setupEventListeners();
+                this.gameLoop();
+            }
+
+            setupLevel() {
+                const level = LEVELS[this.currentLevel];
+                this.mario = new Mario(50, 480);
+                this.platforms = level.platforms;
+                this.enemies = level.enemies.map(e => 
+                    new Enemy(e.x, e.y, e.width, e.height, e.speed, e.range)
+                );
+                this.coins = level.coins.map(c => ({...c, collected: false}));
+                this.goal = level.goal;
+                this.levelName = level.name;
+                this.timeLeft = 300;
+            }
+
+            setupEventListeners() {
+                window.addEventListener('keydown', (e) => {
+                    this.keys[e.key] = true;
+                    if (e.key === 'p' || e.key === 'P') {
+                        this.paused = !this.paused;
+                    }
+                    if (e.key === 'r' || e.key === 'R') {
+                        location.reload();
+                    }
+                });
+
+                window.addEventListener('keyup', (e) => {
+                    this.keys[e.key] = false;
+                });
+            }
+
+            checkCollision(rect1, rect2) {
+                return rect1.x < rect2.x + rect2.width &&
+                       rect1.x + rect1.width > rect2.x &&
+                       rect1.y < rect2.y + rect2.height &&
+                       rect1.y + rect1.height > rect2.y;
+            }
+
+            update() {
+                if (this.paused || this.gameOver || this.won) return;
+
+                this.mario.update(this.keys, this.platforms);
+
+                // 敌人更新和碰撞
+                for (let enemy of this.enemies) {
+                    enemy.update();
+                    
+                    if (this.checkCollision(this.mario.getRect(), enemy.getRect())) {
+                        this.mario.takeDamage(20);
+                    }
+                }
+
+                // 金币检测
+                for (let coin of this.coins) {
+                    if (!coin.collected && 
+                        Math.hypot(
+                            this.mario.x + this.mario.width / 2 - (coin.x + 10),
+                            this.mario.y + this.mario.height / 2 - (coin.y + 10)
+                        ) < 25) {
+                        
+                        coin.collected = true;
+                        this.score += 100;
+                        audioManager.playCoin();
+                        
+                        // 粒子效果
+                        for (let i = 0; i < 8; i++) {
+                            const angle = (Math.PI * 2 * i) / 8;
+                            const vx = Math.cos(angle) * 3;
+                            const vy = Math.sin(angle) * 3;
+                            this.particles.push(new Particle(coin.x, coin.y, vx, vy, '#FFD700', 20));
+                        }
+                    }
+                }
+
+                // 目标检测
+                if (this.checkCollision(this.mario.getRect(), this.goal)) {
+                    this.levelComplete();
+                }
+
+                // 时间减少
+                this.timeLeft--;
+                if (this.timeLeft <= 0) {
+                    this.mario.takeDamage(this.mario.health);
+                    this.endGame();
+                }
+
+                // 健康检测
+                if (this.mario.health <= 0) {
+                    this.endGame();
+                }
+
+                // 粒子更新
+                this.particles = this.particles.filter(p => p.life > 0);
+                this.particles.forEach(p => p.update());
+            }
+
+            levelComplete() {
+                this.won = true;
+                this.score += this.timeLeft * 10;
+                audioManager.playLevelComplete();
+                
+                setTimeout(() => {
+                    if (this.currentLevel < LEVELS.length - 1) {
+                        this.currentLevel++;
+                        this.won = false;
+                        this.setupLevel();
+                    } else {
+                        this.showGameOver(true);
+                    }
+                }, 2000);
+            }
+
+            endGame() {
+                this.gameOver = true;
+                audioManager.playGameOver();
+                this.showGameOver(false);
+            }
+
+            showGameOver(won) {
+                const modal = document.getElementById('gameModal');
+                const title = document.getElementById('modalTitle');
+                const text = document.getElementById('modalText');
+
+                if (won) {
+                    title.textContent = '🎉 恭喜通关！';
+                    text.textContent = `最终分数: ${this.score} | 总金币: ${this.coins.filter(c => c.collected).length}`;
+                } else {
+                    title.textContent = '❌ 游戏结束';
+                    text.textContent = `最终分数: ${this.score} | 总金币: ${this.coins.filter(c => c.collected).length}`;
+                }
+
+                modal.classList.add('show');
+            }
+
+            draw() {
+                // 清空画布
+                this.ctx.fillStyle = '#87CEEB';
+                this.ctx.fillRect(0, 0, 800, 600);
+
+                // 绘制云朵
+                this.drawClouds();
+
+                // 绘制平台
+                for (let platform of this.platforms) {
+                    this.drawPlatform(platform);
+                }
+
+                // 绘制金币
+                for (let coin of this.coins) {
+                    if (!coin.collected) {
+                        this.drawCoin(coin.x, coin.y);
+                    }
+                }
+
+                // 绘制敌人
+                for (let enemy of this.enemies) {
+                    enemy.draw(this.ctx);
+                }
+
+                // 绘制目标
+                this.drawGoal();
+
+                // 绘制马里奥
+                this.mario.draw(this.ctx);
+
+                // 绘制粒子
+                this.particles.forEach(p => p.draw(this.ctx));
+
+                // 暂停覆盖
+                if (this.paused) {
+                    this.ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+                    this.ctx.fillRect(0, 0, 800, 600);
+                    this.ctx.fillStyle = '#FFF';
+                    this.ctx.font = 'bold 48px Arial';
+                    this.ctx.textAlign = 'center';
+                    this.ctx.fillText('暂停中', 400, 300);
+                }
+
+                // 更新UI
+                this.updateUI();
+            }
+
+            drawPlatform(platform) {
+                // 平台
+                this.ctx.fillStyle = '#8B4513';
+                this.ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+
+                // 边框
+                this.ctx.strokeStyle = '#654321';
+                this.ctx.lineWidth = 2;
+                this.ctx.strokeRect(platform.x, platform.y, platform.width, platform.height);
+
+                // 砖块纹理
+                this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+                for (let i = 0; i < platform.width; i += 20) {
+                    for (let j = 0; j < platform.height; j += 20) {
+                        this.ctx.fillRect(platform.x + i, platform.y + j, 18, 18);
+                    }
+                }
+            }
+
+            drawCoin(x, y) {
+                this.ctx.fillStyle = '#FFD700';
+                this.ctx.beginPath();
+                this.ctx.arc(x + 10, y + 10, 8, 0, Math.PI * 2);
+                this.ctx.fill();
+
+                this.ctx.strokeStyle = '#FFA500';
+                this.ctx.lineWidth = 2;
+                this.ctx.stroke();
+
+                // 硬币标记
+                this.ctx.fillStyle = '#FFA500';
+                this.ctx.font = 'bold 10px Arial';
+                this.ctx.textAlign = 'center';
+                this.ctx.textBaseline = 'middle';
+                this.ctx.fillText('$', x + 10, y + 10);
+            }
+
+            drawGoal() {
+                // 城堡
+                this.ctx.fillStyle = '#8B4513';
+                this.ctx.fillRect(this.goal.x, this.goal.y, this.goal.width, 70);
+
+                // 旗杆
+                this.ctx.strokeStyle = '#654321';
+                this.ctx.lineWidth = 3;
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.goal.x + this.goal.width - 20, this.goal.y);
+                this.ctx.lineTo(this.goal.x + this.goal.width - 20, this.goal.y - 40);
+                this.ctx.stroke();
+
+                // 旗帜
+                this.ctx.fillStyle = '#FF0000';
+                this.ctx.fillRect(
+                    this.goal.x + this.goal.width - 20,
+                    this.goal.y - 40,
+                    25,
+                    20
+                );
+
+                // 门
+                this.ctx.fillStyle = '#000';
+                this.ctx.fillRect(this.goal.x + 20, this.goal.y + 30, 25, 40);
+
+                // 屋顶
+                this.ctx.fillStyle = '#FF0000';
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.goal.x, this.goal.y);
+                this.ctx.lineTo(this.goal.x + this.goal.width / 2, this.goal.y - 20);
+                this.ctx.lineTo(this.goal.x + this.goal.width, this.goal.y);
+                this.ctx.fill();
+            }
+
+            drawClouds() {
+                const clouds = [
+                    {x: 100, y: 80},
+                    {x: 300, y: 120},
+                    {x: 550, y: 100},
+                    {x: 700, y: 150}
+                ];
+
+                this.ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+                for (let cloud of clouds) {
+                    this.ctx.beginPath();
+                    this.ctx.arc(cloud.x, cloud.y, 20, 0, Math.PI * 2);
+                    this.ctx.arc(cloud.x + 30, cloud.y, 25, 0, Math.PI * 2);
+                    this.ctx.arc(cloud.x + 60, cloud.y, 20, 0, Math.PI * 2);
+                    this.ctx.fill();
+                }
+            }
+
+            updateUI() {
+                document.getElementById('levelDisplay').textContent = this.levelName;
+                document.getElementById('scoreDisplay').textContent = this.score;
+                document.getElementById('coinDisplay').textContent = 
+                    `🪙 金币: ${this.coins.filter(c => c.collected).length}/${this.coins.length}`;
+                document.getElementById('timeDisplay').textContent = 
+                    `⏱️ 时间: ${Math.max(0, this.timeLeft)}`;
+
+                const healthPercent = (this.mario.health / this.mario.maxHealth) * 100;
+                document.getElementById('healthFill').style.width = healthPercent + '%';
+            }
+
+            gameLoop() {
+                this.update();
+                this.draw();
+                requestAnimationFrame(() => this.gameLoop());
+            }
+        }
+
+        // ==================== 初始化游戏 ====================
+        const audioManager = new AudioManager();
+        const game = new Game();
+    </script>
+</body>
+</html>

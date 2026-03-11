@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run dev)",
+      "Bash(python -m pip install django djangorestframework django-cors-filter mysqlclient --quiet)",
+      "Bash(python -m pip install:*)",
+      "Bash(python manage.py startapp reports)",
+      "Bash(python manage.py:*)",
+      "Bash(python manage.py startapp:*)",
+      "Bash(python:*)",
+      "Bash(set:*)",
+      "Bash(curl:*)",
+      "Bash(timeout:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(npm install:*)",
+      "Bash(node scripts/test-api.js)",
+      "Bash(node:*)",
+      "Bash(if:*)",
+      "Bash(pip install:*)",
+      "Bash(where:*)",
+      "Bash(netstat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
