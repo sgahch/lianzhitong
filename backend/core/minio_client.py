@@ -45,17 +45,21 @@ class MinIOClient:
                 import json
                 self.client.set_bucket_policy(self.bucket_name, json.dumps(policy))
         except S3Error as e:
-            print(f"创建存储桶失败: {e}")
+            print(f"⚠️  MinIO 存储桶检查失败: {e}")
+            print(f"   这是正常的，如果 MinIO 服务器未运行")
+        except Exception as e:
+            print(f"⚠️  MinIO 连接失败: {e}")
+            print(f"   MinIO 功能将不可用，直到服务器可访问")
     
     def upload_file(self, file_obj, folder='files', original_filename=None):
         """
         上传文件到 MinIO
-        
+
         Args:
             file_obj: 文件对象（Django UploadedFile）
             folder: 存储文件夹名称
             original_filename: 原始文件名
-        
+
         Returns:
             dict: 包含文件信息的字典 {url, filename, size}
         """
@@ -66,18 +70,18 @@ class MinIOClient:
                 filename = f"{uuid.uuid4().hex}{ext}"
             else:
                 filename = f"{uuid.uuid4().hex}"
-            
+
             # 构建对象名称（包含文件夹路径）
             object_name = f"{folder}/{filename}"
-            
+
             # 获取文件大小
             file_obj.seek(0, os.SEEK_END)
             file_size = file_obj.tell()
             file_obj.seek(0)
-            
+
             # 获取文件类型
             content_type = getattr(file_obj, 'content_type', 'application/octet-stream')
-            
+
             # 上传文件
             self.client.put_object(
                 self.bucket_name,
@@ -86,10 +90,10 @@ class MinIOClient:
                 file_size,
                 content_type=content_type
             )
-            
+
             # 生成访问 URL
             url = self.get_file_url(object_name)
-            
+
             return {
                 'url': url,
                 'filename': original_filename or filename,
@@ -97,6 +101,8 @@ class MinIOClient:
                 'object_name': object_name
             }
         except S3Error as e:
+            raise Exception(f"MinIO 文件上传失败: {e}")
+        except Exception as e:
             raise Exception(f"文件上传失败: {e}")
     
     def get_file_url(self, object_name):
